@@ -10,38 +10,38 @@ const Browse = () => {
   const [savedProfessionals, setSavedProfessionals] = useState([]);
   const [professionals, setProfessionals] = useState([
     // Wedding Planning
-    { id: 1, name: 'Grace Wanjiku', category: 'wedding', specialty: 'Wedding Planning & Coordination', location: 'Nairobi, Kenya', rating: 4.6, pricing: 'KSh250,000', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face', verified: true, email: 'grace@weddingplans.co.ke' },
-    { id: 2, name: 'Michael Ochieng', category: 'wedding', specialty: 'Luxury Wedding Planning', location: 'Mombasa, Kenya', rating: 4.5, pricing: 'KSh400,000', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face', verified: true, email: 'michael@luxuryweddings.ke' },
-    { id: 3, name: 'Sarah Muthoni', category: 'wedding', specialty: 'Traditional Wedding Specialist', location: 'Nakuru, Kenya', rating: 4.4, pricing: 'KSh180,000', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face', verified: true, email: 'sarah@traditionweddings.ke' },
+    { id: 1, name: 'Grace Wanjiku', category: 'wedding', specialty: 'Wedding Planning & Coordination', location: 'Nairobi, Kenya', rating: 4.6, pricing: 'KSh250,000', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face', verified: true, email: 'grace@weddingplans.co.ke', membership: 'gold' },
+    { id: 2, name: 'Michael Ochieng', category: 'wedding', specialty: 'Luxury Wedding Planning', location: 'Mombasa, Kenya', rating: 4.5, pricing: 'KSh400,000', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face', verified: true, email: 'michael@luxuryweddings.ke', membership: 'gold' },
+    { id: 3, name: 'Sarah Muthoni', category: 'wedding', specialty: 'Traditional Wedding Specialist', location: 'Nakuru, Kenya', rating: 4.4, pricing: 'KSh180,000', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face', verified: true, email: 'sarah@traditionweddings.ke', membership: 'silver' },
     
     // Corporate Events
-    { id: 8, name: 'Robert Kimani', category: 'corporate', specialty: 'Corporate Event Management', location: 'Nairobi, Kenya', rating: 4.5, pricing: 'KSh150,000', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face', verified: true, email: 'robert@corporateevents.ke' },
-    { id: 9, name: 'Jennifer Wanjiru', category: 'corporate', specialty: 'Conference & Seminar Planning', location: 'Nairobi, Kenya', rating: 4.6, pricing: 'KSh200,000', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face', verified: true, email: 'jennifer@conferences.ke' },
+    { id: 8, name: 'Robert Kimani', category: 'corporate', specialty: 'Corporate Event Management', location: 'Nairobi, Kenya', rating: 4.5, pricing: 'KSh150,000', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face', verified: true, email: 'robert@corporateevents.ke', membership: 'gold' },
+    { id: 9, name: 'Jennifer Wanjiru', category: 'corporate', specialty: 'Conference & Seminar Planning', location: 'Nairobi, Kenya', rating: 4.6, pricing: 'KSh200,000', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face', verified: true, email: 'jennifer@conferences.ke', membership: 'silver' },
     
     // Party Planning
-    { id: 14, name: 'Mary Wanjiku', category: 'party', specialty: 'Birthday Party Planning', location: 'Nairobi, Kenya', rating: 4.5, pricing: 'KSh65,000', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face', verified: true, email: 'mary@birthdayparties.ke' },
-    { id: 15, name: 'Daniel Mwangi', category: 'party', specialty: 'Kids Party Specialist', location: 'Kiambu, Kenya', rating: 4.6, pricing: 'KSh45,000', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face', verified: true, email: 'daniel@kidsparties.ke' },
+    { id: 14, name: 'Mary Wanjiku', category: 'party', specialty: 'Birthday Party Planning', location: 'Nairobi, Kenya', rating: 4.5, pricing: 'KSh65,000', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face', verified: true, email: 'mary@birthdayparties.ke', membership: 'gold' },
+    { id: 15, name: 'Daniel Mwangi', category: 'party', specialty: 'Kids Party Specialist', location: 'Kiambu, Kenya', rating: 4.6, pricing: 'KSh45,000', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face', verified: true, email: 'daniel@kidsparties.ke', membership: 'silver' },
     
     // Photography
-    { id: 22, name: 'Sarah Johnson', category: 'photography', specialty: 'Wedding Photography', location: 'Nairobi, Kenya', rating: 4.6, pricing: 'KSh180,000', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop&crop=face', verified: true, email: 'sarah@weddingphotos.ke' },
-    { id: 23, name: 'James Mwangi', category: 'photography', specialty: 'Event Photography', location: 'Mombasa, Kenya', rating: 4.5, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face', verified: true, email: 'james@eventphotos.ke' },
-    { id: 24, name: 'Linda Wanjiru', category: 'photography', specialty: 'Corporate Photography', location: 'Nairobi, Kenya', rating: 4.4, pricing: 'KSh95,000', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face', verified: true, email: 'linda@corporatephotos.ke' },
+    { id: 22, name: 'Sarah Johnson', category: 'photography', specialty: 'Wedding Photography', location: 'Nairobi, Kenya', rating: 4.6, pricing: 'KSh180,000', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop&crop=face', verified: true, email: 'sarah@weddingphotos.ke', membership: 'gold' },
+    { id: 23, name: 'James Mwangi', category: 'photography', specialty: 'Event Photography', location: 'Mombasa, Kenya', rating: 4.5, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face', verified: true, email: 'james@eventphotos.ke', membership: 'silver' },
+    { id: 24, name: 'Linda Wanjiru', category: 'photography', specialty: 'Corporate Photography', location: 'Nairobi, Kenya', rating: 4.4, pricing: 'KSh95,000', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face', verified: true, email: 'linda@corporatephotos.ke', membership: 'gold' },
     
     // Catering
-    { id: 30, name: 'Joseph Kiprotich', category: 'catering', specialty: 'Traditional Kenyan Cuisine', location: 'Eldoret, Kenya', rating: 4.5, pricing: 'KSh2,800/person', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face', verified: true, email: 'joseph@traditionalkenyancuisine.ke' },
+    { id: 30, name: 'Joseph Kiprotich', category: 'catering', specialty: 'Traditional Kenyan Cuisine', location: 'Eldoret, Kenya', rating: 4.5, pricing: 'KSh2,800/person', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face', verified: true, email: 'joseph@traditionalkenyancuisine.ke', membership: 'silver' },
     
     // Entertainment
-    { id: 37, name: 'DJ Mike Ochieng', category: 'entertainment', specialty: 'Wedding DJ Services', location: 'Nairobi, Kenya', rating: 4.5, pricing: 'KSh75,000', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face', verified: true, email: 'mike@weddingdj.ke' },
-    { id: 38, name: 'Stella Wanjiru', category: 'entertainment', specialty: 'Live Band Performance', location: 'Mombasa, Kenya', rating: 4.6, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face', verified: true, email: 'stella@liveband.ke' },
+    { id: 37, name: 'DJ Mike Ochieng', category: 'entertainment', specialty: 'Wedding DJ Services', location: 'Nairobi, Kenya', rating: 4.5, pricing: 'KSh75,000', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face', verified: true, email: 'mike@weddingdj.ke', membership: 'gold' },
+    { id: 38, name: 'Stella Wanjiru', category: 'entertainment', specialty: 'Live Band Performance', location: 'Mombasa, Kenya', rating: 4.6, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face', verified: true, email: 'stella@liveband.ke', membership: 'silver' },
     
     // More Wedding Planning
-    { id: 4, name: 'David Kiprop', category: 'wedding', specialty: 'Destination Wedding Planner', location: 'Naivasha, Kenya', rating: 4.6, pricing: 'KSh350,000', image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=400&h=400&fit=crop&crop=face', verified: true, email: 'david@destinationweddings.ke' },
-    { id: 5, name: 'Lucy Akinyi', category: 'wedding', specialty: 'Budget Wedding Planning', location: 'Kisumu, Kenya', rating: 4.3, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face', verified: true, email: 'lucy@budgetweddings.ke' },
+    { id: 4, name: 'David Kiprop', category: 'wedding', specialty: 'Destination Wedding Planner', location: 'Naivasha, Kenya', rating: 4.6, pricing: 'KSh350,000', image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=400&h=400&fit=crop&crop=face', verified: true, email: 'david@destinationweddings.ke', membership: 'gold' },
+    { id: 5, name: 'Lucy Akinyi', category: 'wedding', specialty: 'Budget Wedding Planning', location: 'Kisumu, Kenya', rating: 4.3, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face', verified: true, email: 'lucy@budgetweddings.ke', membership: 'silver' },
     
     // More Corporate Events
-    { id: 10, name: 'Samuel Mutua', category: 'corporate', specialty: 'Product Launch Events', location: 'Mombasa, Kenya', rating: 4.4, pricing: 'KSh180,000', image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop&crop=face', verified: true, email: 'samuel@productlaunches.ke' },
-    { id: 11, name: 'Catherine Njeri', category: 'corporate', specialty: 'Team Building Events', location: 'Nakuru, Kenya', rating: 4.5, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=400&fit=crop&crop=face', verified: true, email: 'catherine@teambuilding.ke' },
-    { id: 12, name: 'John Kariuki', category: 'corporate', specialty: 'Executive Retreats', location: 'Naivasha, Kenya', rating: 4.6, pricing: 'KSh300,000', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80', verified: true, email: 'john@executiveretreats.ke' },
+    { id: 10, name: 'Samuel Mutua', category: 'corporate', specialty: 'Product Launch Events', location: 'Mombasa, Kenya', rating: 4.4, pricing: 'KSh180,000', image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop&crop=face', verified: true, email: 'samuel@productlaunches.ke', membership: 'silver' },
+    { id: 11, name: 'Catherine Njeri', category: 'corporate', specialty: 'Team Building Events', location: 'Nakuru, Kenya', rating: 4.5, pricing: 'KSh120,000', image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=400&fit=crop&crop=face', verified: true, email: 'catherine@teambuilding.ke', membership: 'gold' },
+    { id: 12, name: 'John Kariuki', category: 'corporate', specialty: 'Executive Retreats', location: 'Naivasha, Kenya', rating: 4.6, pricing: 'KSh300,000', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80', verified: true, email: 'john@executiveretreats.ke', membership: 'gold' },
     
     // More Party Planning
     { id: 16, name: 'Rose Achieng', category: 'party', specialty: 'Graduation Party Planner', location: 'Kisumu, Kenya', rating: 4.4, pricing: 'KSh55,000', image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop&crop=face', verified: true, email: 'rose@graduationparties.ke' },
@@ -82,15 +82,34 @@ const Browse = () => {
   ]);
   const [categories, setCategories] = useState([
     { id: 'all', name: 'All Categories' },
-    { id: 'wedding', name: 'Wedding Planning' },
-    { id: 'corporate', name: 'Corporate Events' },
-    { id: 'party', name: 'Party Planning' },
-    { id: 'photography', name: 'Photographer' },
     { id: 'catering', name: 'Catering' },
+    { id: 'bakery', name: 'Bakery' },
+    { id: 'tents-decor', name: 'Tents & Decor' },
+    { id: 'transport', name: 'Transport Services' },
+    { id: 'team-building', name: 'Team Building' },
+    { id: 'ushers-venue', name: 'Ushers/Venue Coordinators' },
+    { id: 'event-planners', name: 'Event Planners' },
+    { id: 'security', name: 'Security Services' },
+    { id: 'corporate', name: 'Corporate Events' },
+    { id: 'venues', name: 'Venues' },
+    { id: 'venues-garden', name: 'Venues - Garden' },
+    { id: 'venues-hall', name: 'Venues - Hall' },
+    { id: 'venues-conference', name: 'Venues - Conference Facilities' },
+    { id: 'stylists', name: 'Stylists' },
+    { id: 'stylists-gowns', name: 'Stylists - Gowns' },
+    { id: 'stylists-suits', name: 'Stylists - Suits' },
+    { id: 'stylists-african', name: 'Stylists - African Wear' },
+    { id: 'stylists-jewelry', name: 'Stylists - Jewelry' },
+    { id: 'stylists-makeup', name: 'Stylists - Makeup' },
+    { id: 'stylists-hair', name: 'Stylists - Hair & Barbers' },
     { id: 'entertainment', name: 'Entertainment' },
-    { id: 'venue', name: 'Venue Coordinators' },
-    { id: 'decoration', name: 'Event Decoration' },
-    { id: 'security', name: 'Security Services' }
+    { id: 'entertainment-photography', name: 'Entertainment - Photography' },
+    { id: 'entertainment-videography', name: 'Entertainment - Videography' },
+    { id: 'entertainment-sound', name: 'Entertainment - Sound & PA' },
+    { id: 'entertainment-stage', name: 'Entertainment - Stage' },
+    { id: 'entertainment-lights', name: 'Entertainment - Lights' },
+    { id: 'entertainment-mascot', name: 'Entertainment - Mascot & Clowns' },
+    { id: 'entertainment-facepainting', name: 'Entertainment - Face Painting & Body Art' }
   ]);
 
   useEffect(() => {
@@ -154,7 +173,7 @@ const Browse = () => {
                 <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
                 </svg>
-                <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2">Browse Professionals</span>
+                <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2">Browse Service Providers</span>
               </div>
             </li>
           </ol>
@@ -162,7 +181,7 @@ const Browse = () => {
 
         {/* Header */}
         <div className="mb-8">
-          <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>Browse Professionals</h1>
+          <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>Browse Service Providers</h1>
           <p className={`text-lg ${isDark ? 'text-gray-300' : 'text-gray-600'} mb-6`}>Find verified event professionals for your perfect celebration</p>
           
           {/* Search and Filter */}
@@ -203,7 +222,7 @@ const Browse = () => {
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-gray-600">
-            Showing {filteredProfessionals.length} professional{filteredProfessionals.length !== 1 ? 's' : ''}
+            Showing {filteredProfessionals.length} service provider{filteredProfessionals.length !== 1 ? 's' : ''}
             {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
           </p>
         </div>
@@ -232,17 +251,25 @@ const Browse = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   {/* Enhanced Badges */}
                   <div className="absolute top-4 right-4 flex flex-col gap-2">
+                    {professional.membership && (
+                      <div className={`${professional.membership === 'gold' 
+                        ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' 
+                        : 'bg-gradient-to-r from-gray-400 to-gray-500'
+                      } text-white px-3 py-2 rounded-full text-xs font-bold flex items-center shadow-lg backdrop-blur-sm border border-white/20`}>
+                        <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        {professional.membership.toUpperCase()}
+                      </div>
+                    )}
                     {professional.verified && (
                       <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-2 rounded-full text-xs font-bold flex items-center shadow-lg backdrop-blur-sm border border-white/20">
                         <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        Verified Pro
+                        Verified
                       </div>
                     )}
-                    <div className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm border border-white/20">
-                      ⭐ Top Rated
-                    </div>
                   </div>
                   <div className="absolute bottom-4 left-4 bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-bold border border-white/20 shadow-lg">
                     ✨ {professional.specialty}
@@ -259,10 +286,20 @@ const Browse = () => {
                     <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-sm px-3 py-1 rounded-full capitalize">
                       {professional.category}
                     </span>
-                    <div className="flex items-center bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
-                      <span className="text-yellow-500 mr-1">🏆</span>
-                      Premium
-                    </div>
+                    {professional.membership && (
+                      <div className={`flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                        professional.membership === 'gold' 
+                          ? 'bg-yellow-100 text-yellow-800' 
+                          : 'bg-gray-100 text-gray-800'
+                      }`}>
+                        <span className={`mr-1 ${
+                          professional.membership === 'gold' ? 'text-yellow-500' : 'text-gray-500'
+                        }`}>
+                          {professional.membership === 'gold' ? '👑' : '🥈'}
+                        </span>
+                        {professional.membership.toUpperCase()}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mb-4 text-sm leading-relaxed line-clamp-2`}>{professional.bio || 'Professional event service provider with years of experience delivering exceptional results.'}</p>
@@ -332,7 +369,7 @@ const Browse = () => {
                     <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    Contact Professional
+                    Contact Service Provider
                   </a>
                   <div className="flex gap-2">
                     <a 
@@ -368,10 +405,10 @@ const Browse = () => {
             <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            <h3 className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>No professionals found</h3>
+            <h3 className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>No service providers found</h3>
             <p className={`${isDark ? 'text-gray-400' : 'text-gray-500'} mb-4`}>
               {professionals.length === 0 
-                ? 'No professionals have registered yet. Be the first to join!' 
+                ? 'No service providers have registered yet. Be the first to join!' 
                 : 'Try adjusting your search criteria or browse all categories.'}
             </p>
             <div className="space-x-4">
@@ -387,7 +424,7 @@ const Browse = () => {
                 to="/signup" 
                 className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors inline-block"
               >
-                Join as Professional
+                Join as Service Provider
               </Link>
             </div>
           </div>

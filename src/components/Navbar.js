@@ -39,7 +39,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link to="/browse" className={`${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} px-3 py-2 text-sm font-medium transition-colors duration-200`}>
-                Browse Professionals
+                Browse Service Providers
               </Link>
               <a href="/#services" className={`${isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} px-3 py-2 text-sm font-medium transition-colors duration-200`}>
                 Services
@@ -95,7 +95,7 @@ const Navbar = () => {
                     Sign In
                   </Link>
                   <Link to="/signup" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-                    Join as Professional
+                    Join as Service Provider
                   </Link>
                 </>
               )}
@@ -120,7 +120,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${isDark ? 'bg-gray-900 border-t border-gray-800' : 'bg-white border-t border-gray-200'}`}>
               <Link to="/browse" className={`${isDark ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} block px-3 py-2 text-base font-medium rounded-lg transition-colors duration-200`}>
-                Browse Professionals
+                Browse Service Providers
               </Link>
               <a href="/#services" className={`${isDark ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'} block px-3 py-2 text-base font-medium rounded-lg transition-colors duration-200`}>
                 Services
@@ -156,7 +156,7 @@ const Navbar = () => {
                       Sign In
                     </Link>
                     <Link to="/signup" className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-lg text-base font-medium mt-2 transition-colors duration-200">
-                      Join as Professional
+                      Join as Service Provider
                     </Link>
                   </>
                 )}

@@ -8,30 +8,32 @@ const SubscriptionPlans = () => {
 
   const plans = [
     {
-      name: "Starter",
-      description: "Perfect for new professionals",
-      monthlyPrice: 3770,
-      annualPrice: 37700,
+      name: "Silver",
+      description: "Perfect for new service providers",
+      monthlyPrice: 5000,
+      annualPrice: 50000,
       popular: false,
       features: [
         "Professional profile creation",
-        "Up to 15 portfolio images",
+        "Up to 20 portfolio images",
         "Client inquiry management",
         "Basic analytics dashboard",
         "Mobile app access",
-        "Email support"
+        "Email support",
+        "Standard listing placement"
       ],
       buttonText: "Get Started",
-      buttonStyle: "btn-secondary"
+      buttonStyle: "btn-secondary",
+      color: "silver"
     },
     {
-      name: "Professional",
-      description: "Best for growing businesses",
-      monthlyPrice: 10270,
-      annualPrice: 102700,
+      name: "Gold",
+      description: "Best for established businesses",
+      monthlyPrice: 12000,
+      annualPrice: 120000,
       popular: true,
       features: [
-        "Everything in Starter",
+        "Everything in Silver",
         "Unlimited portfolio images",
         "Premium listing placement",
         "Instant quote generation",
@@ -39,29 +41,12 @@ const SubscriptionPlans = () => {
         "WhatsApp & SMS integration",
         "Advanced analytics",
         "Priority support",
-        "Custom booking forms"
+        "Custom booking forms",
+        "Featured in search results"
       ],
       buttonText: "Start Free Trial",
-      buttonStyle: "btn-primary"
-    },
-    {
-      name: "Enterprise",
-      description: "For established agencies",
-      monthlyPrice: 25870,
-      annualPrice: 258700,
-      popular: false,
-      features: [
-        "Everything in Professional",
-        "Multi-user team accounts",
-        "White-label solutions",
-        "API access",
-        "Custom integrations",
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Custom contracts & invoicing"
-      ],
-      buttonText: "Contact Sales",
-      buttonStyle: "btn-secondary"
+      buttonStyle: "btn-primary",
+      color: "gold"
     }
   ];
 
@@ -102,7 +87,7 @@ const SubscriptionPlans = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={plan.name}
@@ -172,7 +157,7 @@ const SubscriptionPlans = () => {
               </ul>
               
               <Link 
-                to={plan.name === 'Enterprise' ? '/contact' : '/checkout'}
+                to='/checkout'
                 state={{ plan, isAnnual }}
                 className={`group relative w-full py-4 px-6 rounded-xl font-bold text-center transition-all duration-300 block transform hover:scale-105 overflow-hidden ${
                   plan.popular 

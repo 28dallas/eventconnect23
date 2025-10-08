@@ -11,57 +11,21 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Wedding Planning",
-      description: "Make your special day perfect with expert wedding coordination",
-      professionals: 5,
+      title: "Event Planners",
+      description: "Professional event coordination and planning services",
+      professionals: 8,
       rating: 4.5,
       startingPrice: "KSh120,000",
       responseTime: "2 hours",
       topPro: "Grace Wanjiku",
       image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "wedding"
+      filterValue: "event-planners"
     },
     {
       id: 2,
-      title: "Corporate Events",
-      description: "Professional business gatherings and corporate functions",
-      professionals: 4,
-      rating: 4.6,
-      startingPrice: "KSh120,000",
-      responseTime: "1 hour",
-      topPro: "Robert Kimani",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "corporate"
-    },
-    {
-      id: 3,
-      title: "Party Planning",
-      description: "Celebrate in style with expert party coordination",
-      professionals: 4,
-      rating: 4.4,
-      startingPrice: "KSh35,000",
-      responseTime: "3 hours",
-      topPro: "Mary Wanjiku",
-      image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "party"
-    },
-    {
-      id: 4,
-      title: "Photography",
-      description: "Capture every precious moment with professional photography",
-      professionals: 6,
-      rating: 4.5,
-      startingPrice: "KSh65,000",
-      responseTime: "30 mins",
-      topPro: "Sarah Johnson",
-      image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "photography"
-    },
-    {
-      id: 5,
       title: "Catering",
       description: "Delicious culinary experiences tailored to your event",
-      professionals: 3,
+      professionals: 12,
       rating: 4.4,
       startingPrice: "KSh2,800/person",
       responseTime: "4 hours",
@@ -70,52 +34,88 @@ const ServicesSection = () => {
       filterValue: "catering"
     },
     {
-      id: 6,
-      title: "Entertainment",
-      description: "Keep guests engaged with professional entertainment services",
-      professionals: 4,
-      rating: 4.5,
-      startingPrice: "KSh35,000",
-      responseTime: "1 hour",
-      topPro: "DJ Mike Ochieng",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "entertainment"
+      id: 3,
+      title: "Bakery",
+      description: "Custom cakes and baked goods for special occasions",
+      professionals: 6,
+      rating: 4.6,
+      startingPrice: "KSh15,000",
+      responseTime: "6 hours",
+      topPro: "Mary Wanjiku",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      filterValue: "bakery"
     },
     {
-      id: 7,
-      title: "Venue Coordinators",
-      description: "Perfect venues for every occasion and budget",
-      professionals: 3,
-      rating: 4.5,
-      startingPrice: "KSh85,000",
-      responseTime: "2 hours",
-      topPro: "Andrew Mwangi",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "venue"
-    },
-    {
-      id: 8,
-      title: "Event Decoration",
-      description: "Transform spaces with stunning decorations and floral arrangements",
-      professionals: 4,
+      id: 4,
+      title: "Tents & Decor",
+      description: "Transform spaces with stunning decorations and tent rentals",
+      professionals: 10,
       rating: 4.4,
       startingPrice: "KSh45,000",
       responseTime: "1 hour",
       topPro: "Diana Wanjiku",
       image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      filterValue: "decoration"
+      filterValue: "tents-decor"
     },
     {
-      id: 9,
+      id: 5,
+      title: "Transport Services",
+      description: "Reliable transportation solutions for events and guests",
+      professionals: 8,
+      rating: 4.3,
+      startingPrice: "KSh25,000",
+      responseTime: "1 hour",
+      topPro: "John Mwangi",
+      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      filterValue: "transport"
+    },
+    {
+      id: 6,
+      title: "Team Building",
+      description: "Engaging team building activities and corporate retreats",
+      professionals: 5,
+      rating: 4.5,
+      startingPrice: "KSh35,000",
+      responseTime: "2 hours",
+      topPro: "Sarah Kimani",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      filterValue: "team-building"
+    },
+    {
+      id: 7,
+      title: "Ushers/Venue Coordinators",
+      description: "Professional ushers and venue coordination services",
+      professionals: 15,
+      rating: 4.5,
+      startingPrice: "KSh8,000",
+      responseTime: "2 hours",
+      topPro: "Andrew Mwangi",
+      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      filterValue: "ushers-venue"
+    },
+    {
+      id: 8,
       title: "Security Services",
       description: "Professional security personnel for safe and secure events",
-      professionals: 3,
+      professionals: 12,
       rating: 4.6,
       startingPrice: "KSh25,000",
       responseTime: "30 mins",
       topPro: "Captain Mwangi",
       image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       filterValue: "security"
+    },
+    {
+      id: 9,
+      title: "Entertainment",
+      description: "Photography, videography, sound, lighting and live entertainment",
+      professionals: 25,
+      rating: 4.5,
+      startingPrice: "KSh35,000",
+      responseTime: "1 hour",
+      topPro: "DJ Mike Ochieng",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      filterValue: "entertainment"
     }
   ];
 
@@ -124,39 +124,26 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>
-            Browse Professional Services
+            Browse Service Provider Services
           </h2>
           <p className={`text-xl ${isDark ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto mb-6`}>
-            Connect with verified professionals who bring your events to life
+            Connect with verified service providers who bring your events to life
           </p>
-          <div className="flex justify-center items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>36+ Active Professionals</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-              </svg>
-              <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>4.5 Average Rating</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>Fast Response Times</span>
-            </div>
+          <div className="flex justify-center items-center gap-8 text-sm">
+            <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>100+ Active Service Providers</span>
+            <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>4.5★ Average Rating</span>
+            <span className={isDark ? 'text-gray-400' : 'text-gray-600'}>Fast Response</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <div key={service.id} className={`${isDark ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700' : 'bg-gradient-to-br from-white to-blue-50 border-gray-200'} border rounded-2xl shadow-xl p-6 group cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2`}>
-              <div className="relative mb-4 overflow-hidden rounded-xl">
+            <div key={service.id} className={`${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow duration-200`}>
+              <div className="relative mb-3 overflow-hidden rounded-md">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-40 object-cover"
                 />
                 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1">
                   <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
@@ -166,11 +153,11 @@ const ServicesSection = () => {
                 </div>
               </div>
               
-              <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-2 group-hover:text-blue-600 transition-colors`}>
+              <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>
                 {service.title}
               </h3>
               
-              <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mb-4 text-sm leading-relaxed`}>
+              <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mb-3 text-sm`}>
                 {service.description}
               </p>
               
@@ -196,27 +183,21 @@ const ServicesSection = () => {
                 </div>
               </div>
               
-              <Link to={`/browse?category=${service.filterValue}`} className={`block w-full ${isDark ? 'bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white' : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'} font-bold py-3 px-4 rounded-xl transition-all duration-300 text-center transform group-hover:scale-105 shadow-lg`}>
-                Browse {service.title} Pros
+              <Link to={`/browse?category=${service.filterValue}`} className={`block w-full ${isDark ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 hover:bg-blue-700'} text-white font-medium py-2 px-4 rounded text-center transition-colors duration-200`}>
+                Browse Service Providers
               </Link>
             </div>
           ))}
 
           {/* View All Services Card */}
-          <Link to="/browse" className={`${isDark ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-600 hover:border-yellow-500' : 'bg-gradient-to-br from-white to-purple-50 border-gray-300 hover:border-purple-400'} rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-center group cursor-pointer border-2 border-dashed transition-all duration-500 hover:shadow-2xl hover:-translate-y-2`}>
-            <div className={`w-20 h-20 ${isDark ? 'bg-gradient-to-r from-yellow-600/20 to-orange-600/20 group-hover:from-yellow-600/30 group-hover:to-orange-600/30' : 'bg-gradient-to-r from-blue-100 to-purple-100 group-hover:from-blue-200 group-hover:to-purple-200'} rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110`}>
-              <svg className={`w-10 h-10 ${isDark ? 'text-yellow-400' : 'text-purple-600'} group-hover:rotate-90 transition-transform duration-300`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <Link to="/browse" className={`${isDark ? 'bg-gray-800 border-gray-600 hover:border-blue-500' : 'bg-white border-gray-300 hover:border-blue-400'} rounded-lg shadow-sm p-4 flex flex-col items-center justify-center text-center border-2 border-dashed transition-colors duration-200`}>
+            <div className={`w-16 h-16 ${isDark ? 'bg-blue-600/20' : 'bg-blue-50'} rounded-full flex items-center justify-center mb-3`}>
+              <svg className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
             </div>
-            <h3 className={`text-xl font-bold ${isDark ? 'text-white group-hover:text-yellow-400' : 'text-gray-900 group-hover:text-purple-600'} mb-2 transition-colors`}>View All Professionals</h3>
-            <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Discover 36+ verified professionals across all categories</p>
-            <div className="mt-3 flex items-center gap-2 text-xs text-blue-600 font-medium">
-              <span>Browse All</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
+            <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>View All Service Providers</h3>
+            <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Discover 100+ verified service providers</p>
           </Link>
         </div>
       </div>
